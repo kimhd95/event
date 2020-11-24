@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "cross-env NODE_ENV=production nodemon api_event.js",
+    "dev": "cross-env NODE_ENV=dev nodemon api_event.js",
+    "local": "cross-env NODE_ENV=local nodemon api_event.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,6 +13,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "lodash": "^4.17.20",
     "morgan": "~1.9.1"
   }
 }
